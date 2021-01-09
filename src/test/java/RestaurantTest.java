@@ -73,6 +73,11 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     //>>>>>>>>>>>>>>>>>>>>>>>>ORDERVALUE<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void for_no_item_selected_order_value_should_give_value_as_0(){
+        List<String> menuItems= new ArrayList<String>();
+        assertEquals(0,restaurant.orderValue(menuItems));
+    }
 
     //<<<<<<<<<<<<<<<<<<<<<<<ORDERVALUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
