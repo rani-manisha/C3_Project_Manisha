@@ -79,5 +79,22 @@ class RestaurantTest {
         assertEquals(0,restaurant.orderValue(menuItems));
     }
 
+    @Test
+    public void summing_order_value_should_give_correct_order_value(){
+        restaurant.addToMenu("Chicken wings",199);
+        restaurant.addToMenu("Salad", 149);
+        restaurant.addToMenu("Ice-cream", 99);
+        String menuItem1= restaurant.getMenu().get(1).getName();
+        String menuItem2= restaurant.getMenu().get(3).getName();
+        String menuItem3= restaurant.getMenu().get(4).getName();
+        List<String> menuItems= new ArrayList<String>();
+        menuItems.add(menuItem1);
+        menuItems.add(menuItem2);
+        menuItems.add(menuItem3);
+        assertEquals(517,restaurant.orderValue(menuItems));
+    }
+
+
+
     //<<<<<<<<<<<<<<<<<<<<<<<ORDERVALUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }

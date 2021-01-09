@@ -82,5 +82,15 @@ public class Restaurant {
 
 
     //orderValue method
+    public Integer orderValue(List<String> itemNames){
+        int finalPrice=0;
+        if(itemNames!=null) {
+            for (String i : itemNames)
+                finalPrice = finalPrice + findItemByName(i).getPrice();
+        }
+        return finalPrice;
+    }
+
+
 
 }
